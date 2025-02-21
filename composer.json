@@ -68,12 +68,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "SzymonKostrubiec\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/"
+            "SzymonKostrubiec\\Tests\\": "tests/"
         }
     },
     "replace": {
