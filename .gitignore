@@ -1,4 +1,5 @@
 ./composer.lock
+composer.lock
 ./yarn.lock
 
 ###> symfony/framework-bundle ###
