@@ -1,6 +1,7 @@
 ./composer.lock
 composer.lock
 ./yarn.lock
+.idea
 
 ###> symfony/framework-bundle ###
 /.env.local
