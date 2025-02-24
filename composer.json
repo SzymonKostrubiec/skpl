@@ -68,12 +68,12 @@
     },
     "autoload": {
         "psr-4": {
-            "SzymonKostrubiec\\": "src/"
+            "SzymonKostrubiec\\Skpl\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "SzymonKostrubiec\\Tests\\": "tests/"
+            "SzymonKostrubiec\\Skpl\\Tests\\": "tests/"
         }
     },
     "replace": {

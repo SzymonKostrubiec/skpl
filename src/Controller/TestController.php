@@ -1,6 +1,6 @@
 <?php
 
-namespace SzymonKostrubiec\Controller;
+namespace SzymonKostrubiec\Skpl\Controller;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Response;

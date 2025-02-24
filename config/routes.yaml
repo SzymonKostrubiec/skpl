@@ -1,3 +1,3 @@
 homepage:
     path: /
-    controller: 'szymonkostrubiec.controller.test_controller'
+    controller: 'szymonkostrubiec.skpl.controller.test_controller'
