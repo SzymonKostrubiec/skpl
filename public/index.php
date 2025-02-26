@@ -1,6 +1,6 @@
 <?php
 
-use SzymonKostrubiec\Kernel;
+use SzymonKostrubiec\Skpl\Kernel;
 
 require_once dirname(__DIR__).'/vendor/autoload_runtime.php';
 
