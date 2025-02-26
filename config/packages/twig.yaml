@@ -1,6 +1,10 @@
 twig:
     file_name_pattern: '*.twig'
 
+    paths:
+        '%kernel.project_dir%/templates/admin': Admin
+        '%kernel.project_dir%/templates/main': Main
+
 when@test:
     twig:
         strict_variables: true

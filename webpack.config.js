@@ -5,27 +5,39 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
-    .setOutputPath('public/build/')
-    .setPublicPath('/build')
-
-    .addEntry('app', './assets/app.js')
-    .splitEntryChunks()
-
+    .setOutputPath('public/build/main')
+    .setPublicPath('/build/main')
+    .addEntry('app-main', './assets/main/entry.js')
     .enableSingleRuntimeChunk()
-
     .cleanupOutputBeforeBuild()
-    .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     .enableVersioning(Encore.isProduction())
-
-    .configureBabelPresetEnv((config) => {
-        config.useBuiltIns = 'usage';
-        config.corejs = '3.38';
-    })
-
     .enableSassLoader()
-
     .enableVersioning()
 ;
 
-module.exports = Encore.getWebpackConfig();
+const mainConfig = Encore.getWebpackConfig();
+
+mainConfig.externals = Object.assign({}, mainConfig.externals, { window: 'window', document: 'document' });
+mainConfig.name = 'main';
+
+Encore.reset();
+
+Encore
+    .setOutputPath('public/build/admin')
+    .setPublicPath('/build/admin')
+    .addEntry('app-admin', './assets/admin/entry.js')
+    .enableSingleRuntimeChunk()
+    .cleanupOutputBeforeBuild()
+    .enableSourceMaps(!Encore.isProduction())
+    .enableVersioning(Encore.isProduction())
+    .enableSassLoader()
+    .enableVersioning()
+;
+
+const adminConfig = Encore.getWebpackConfig();
+
+adminConfig.externals = Object.assign({}, adminConfig.externals, { window: 'window', document: 'document' });
+adminConfig.name = 'admin';
+
+module.exports = [mainConfig, adminConfig];
